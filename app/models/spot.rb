@@ -15,4 +15,7 @@ class Genre < ActiveHash::Base
     { id: 13, name: '下田・南伊豆' },
     { id: 14, name: '西伊豆' }
   ]
+
+  include ActiveHash::Associations
+  has_many :plans
   end

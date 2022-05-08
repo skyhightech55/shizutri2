@@ -7,4 +7,7 @@ class Genre < ActiveHash::Base
     { id: 5, name: '一人で' },
     { id: 6, name: '指定なし' }
   ]
+
+  include ActiveHash::Associations
+  has_many :plans
   end
