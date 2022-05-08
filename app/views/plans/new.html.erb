@@ -1,2 +1,11 @@
-<h1>Plans#new</h1>
-<p>Find me in app/views/plans/new.html.erb</p>
+<%= form_with model: @plan, url:plans_path, local: true do |f| %>
+  <div class="plan-box">
+    記事を投稿する
+    <%= f.text_field :name, class:"name", placeholder:"タイトル" %>
+    <%= f.text_area :introduction, class:"introduction", placeholder:"テキスト" %>
+    <%= f.collection_select(:purpose_id, Purpose.all, :id, :name, {}, {class:"purpose-select"}) %>
+    <%= f.collection_select(:who_id, Who.all, :id, :name, {}, {class:"who-select"}) %>
+    <%= f.collection_select(:spot_id, Spot.all, :id, :name, {}, {class:"spot-select"}) %>
+    <%= f.submit "投稿する" ,class:"btn" %>
+  </div>
+<% end %>

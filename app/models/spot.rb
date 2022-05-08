@@ -1,4 +1,4 @@
-class Genre < ActiveHash::Base
+class Spot < ActiveHash::Base
   self.data = [
     { id: 1, name: '--' },
     { id: 2, name: '浜松・浜名湖' },
