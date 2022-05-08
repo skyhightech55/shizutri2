@@ -1,0 +1,22 @@
+<h1>計画一覧</h1>
+<%= link_to "投稿する", plans_new_path, class:"post" %>
+
+<% @plans.each do |plan| %>
+  <div class="plan">
+    <div class="plan-name">
+      <%= article.name %>
+    </div>
+    <div class="plan-purpose">
+      <%= plan.purpose.name %>
+    </div>
+    <div class="plan-who">
+      <%= plan.who.name %>
+    </div>
+    <div class="plan-spot">
+      <%= plan.spot.name %>
+    </div>
+    <div class="plan-introduction">
+      <%= plan.introduction %>
+    </div>
+  </div>
+<% end %>
